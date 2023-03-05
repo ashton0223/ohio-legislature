@@ -11,9 +11,6 @@ def request_ohio(session, directory=""):
     data = json.loads(res.text)
     return data
 
-def get_endpoint(year):
-    return f'{URL}{year}'
-
 if __name__ == "__main__":
     session = calculations.get_session_number()
     print(request_ohio(session))
