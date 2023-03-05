@@ -1,4 +1,11 @@
 import datetime
+import math
 
 def get_session_number():
-    return datetime.datetime.now().year - 1888
+    now = datetime.datetime.now().year
+
+    # Sessions last for two years
+    session = math.ceil((now - 1754) / 2)
+    session_int = int(session)
+
+    return session_int
